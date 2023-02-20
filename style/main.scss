@@ -183,13 +183,16 @@ header
     {
         grid-area: content;
         width: 100vw;
-        background-color: $prime_bg_color;
+        background-color: $font_colortwo;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        align-items: center;
+       
         & div:nth-child(even)
             {
-                background-color: $font_colortwo;
+                width: 100%;
+                background-color: $prime_bg_color;
             }
     }
 
@@ -201,6 +204,69 @@ header
         padding: 0px 10px 0px 10px;
     
     }
+    .content_about
+    {
+        
+        grid-area: content;
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+
+        width: 100%;
+        
+    
+
+        .skillbox
+        {
+            width: 50vw;
+            min-height: 256px;
+            padding: 20px;
+            box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+            
+        
+        }
+        .html
+        {
+       
+        
+            background-image: url(../bilder/html-5-svgrepo-com\(1\).png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .css
+        {
+            background-image: url(../bilder/css-3-svgrepo-com.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .scss
+        {
+            background-image: url(../bilder/sass-svgrepo-com.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        .git
+        {
+            background-image: url(../bilder/git-svgrepo-com.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .github
+        {
+            background-image: url(../bilder/github-svgrepo-com.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .boot
+        {
+            background-image: url(../bilder/bootstrap-svgrepo-com.png);
+            background-size: 80%;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+    
+    
 
   
 
