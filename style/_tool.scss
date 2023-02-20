@@ -1,0 +1,56 @@
+@use "./vari.scss" as *;
+
+
+@mixin nav_box_hover 
+{
+    & a
+            {
+                text-decoration: none;
+                
+                color: $sec_bg_color;
+                padding-left: 15px;
+                font-size: larger;
+                border-left: 2px solid $sec_bg_color;
+                
+                transition-property: color , border-left;
+                transition-duration: 200ms;
+                transition-timing-function: ease-in-out;
+                
+                &:hover
+                {
+                    
+                    color: $special;
+                    border-left: 2px solid $special;
+                    
+                    
+                    
+                }
+               
+            }
+}
+
+@mixin nav_box_hover_desktop 
+{
+    & a
+            {
+                text-decoration: none;
+                color: $font_color;
+                padding-left: 15px;
+                
+                border-left: 2px solid $font_color;
+                transition-property: color , border-left;
+                transition-duration: 200ms;
+                transition-timing-function: ease-in-out;
+                
+                &:hover
+                {
+                    
+                    color: $special;
+                    border-left: 2px solid $special;
+                  
+                    
+                    
+                }
+               
+            }
+}

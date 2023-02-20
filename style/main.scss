@@ -1,0 +1,385 @@
+@use "./vari.scss" as *;
+@use "./tool.scss" as *;
+
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header
+    {
+        z-index: 999;
+        position: relative;
+    }
+
+    .body
+    {
+        z-index: -1;
+        width: 100%;
+        
+        display: grid;
+        grid-template-columns:  
+        1fr 1fr 1fr 1fr;
+
+
+        grid-template-areas: 
+        
+        "jumbobild jumbobild jumbobild jumbobild"
+        "main main main main"
+        "main main main main"
+        "main main main main"
+        "content content content content"
+        "content content content content"
+        "footer footer footer footer";
+    }
+    .header_desktop
+    {
+        display: none;
+    }
+    .header
+    {
+        position: fixed;
+        grid-area: header;
+        background-color: $sec_bg_color;
+        opacity: 90%;
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+        height: 50px;
+        width: 100vw;
+        text-align: center;
+        line-height: 2rem;
+        
+        .header_logo
+        {
+            background-color: $sec_bg_color;
+            width: 100vw;
+            color: $prime_bg_color;
+            text-align: center;
+            margin: 0 auto;
+            line-height: 2.5rem;
+            font-size: 2rem;
+        }
+        .nav {
+            display: none;
+        }
+         
+        #hamburger-menu{
+            display: none;
+        }
+         
+        #hamburger-menu:checked ~ .nav {
+            display: block;
+        }
+    .fa-bars
+    {
+        margin-right: 10px;
+    }
+    
+    
+    .header_container
+    {
+        width: 100vw;
+     
+        
+       
+        text-align: end;
+        margin-right: 5px;
+      
+       
+        .header_menu
+        {
+            background-color: $prime_bg_color;
+            text-align: center;
+            margin-right: -5px;
+            left: 0;
+            top: 50px;
+            position: absolute;
+            width: 100vw;
+           
+            
+            
+            
+        }
+        .header_box
+        {
+            margin-bottom: 20px;
+            width: 100vw;
+           
+            
+            
+            
+            @include nav_box_hover;
+        }
+    }    
+      
+}
+
+    
+    .one
+    {
+        margin-top: 20px;
+    }
+
+    .header_hack
+    {
+        height: 50px;
+        background-color: $sec_bg_color;
+        width: 100vw;
+    }
+
+    .main
+    {
+        grid-area: main;
+        background-color: $font_colortwo;
+        color: $font_color;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        & div:nth-child(even)
+            {
+                
+                background-color: $prime_bg_color;
+                color: $special;
+            }
+        
+        
+    
+    }
+    .main_box 
+    {
+        
+        
+        width: 100vw;
+        p, h2 
+        {
+            padding: 0px 10px 0px 10px;
+            a 
+            {
+                color: $font_color;
+                text-decoration: none;
+                
+                &::after
+                {
+                    margin-left: 5px;
+                    font-family: "Font Awesome 5 Free"; 
+                    font-weight: 600; 
+                    content: "\f0c1";
+                    color: $special;
+                }
+            }
+        
+        }
+    }
+
+    
+
+    
+
+    .content
+    {
+        grid-area: content;
+        width: 100vw;
+        background-color: $prime_bg_color;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        & div:nth-child(even)
+            {
+                background-color: $font_colortwo;
+            }
+    }
+
+    .content_box 
+    {
+
+        margin-bottom: 10px;
+        width: 100%;
+        padding: 0px 10px 0px 10px;
+    
+    }
+
+  
+
+    .footer
+    {
+        grid-area: footer;
+        background-color: $prime_bg_color;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+        padding: 12px;
+        width: 100vw;
+      
+    }
+
+    .bild
+    {
+        
+        width: 100vw;
+        height: 60vh;
+        background-image: url(../bilder/modern-abstract-network-science-connection-technology-internet-and-graphic-design-on-hi-tech-future-blue-background-network-for-template-web-design-wallpaper-poster-presentation-illustration-vector.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        position: relative;
+
+    }
+    .bild_about
+    {
+        width: 100vw;
+        height: 50vh;
+        background-image: url(../bilder/T7HTC0C6B-U04ARU62AET-a831eaf9655c-512.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        position: relative;
+    }
+
+    .jumbobild
+    {
+        grid-area: jumbobild;
+    }
+    .jumbo_text
+    {
+        
+        position: absolute;
+        margin: 0 auto;
+        top: 40%;
+        bottom: 50%;
+        left: 30%;
+        color: $font_colortwo;
+        h1 
+        {
+            font-size: 48px;
+        }
+        p 
+        {
+            margin-top: 5px;
+            padding-left: 14px;
+            text-decoration: underline;
+        }
+        
+    }
+    
+
+
+
+@media (min-width: 1000px)
+{
+
+
+
+
+
+
+    .body
+    {
+       
+        width: 100%; 
+        display: grid;
+        grid-template-columns:  
+        1fr 1fr 1fr 1fr;
+
+        grid-template-areas: 
+        
+        "jumbobild jumbobild jumbobild jumbobild"
+        "main main main main"
+        "main main main main"
+        "main main main main"
+        "content content content content"
+        "content content content content"
+        "footer footer footer footer";
+    }
+
+    .header{
+        display: none;
+    }
+
+    .header_desktop
+    {
+        width: 100vw;
+        height: 4rem;
+        display: grid;
+        grid-template-columns: 
+        3fr 1fr 1fr 1fr 1fr;
+        position: fixed;
+        top: 0;
+        opacity: 98%;
+        .header_desktop_logo, .header_desktop_box 
+        {
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 20px;
+        }
+        
+        .header_desktop_logo
+        {
+            background-color: rgb(71, 71, 71);
+            width: 100%;
+            color: white;
+            font-size: 2rem;
+        
+        }
+        .header_desktop_logo
+        {
+            background-color: $sec_bg_color;
+        }
+        .header_desktop_box
+        {
+            background-color: $font_colortwo;
+            width: 100%;
+            // box-shadow: inset 1px 0px 20px black;
+            @include nav_box_hover_desktop;
+            
+        }
+
+    }
+   
+    .main
+    {
+        
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        .main_box
+        {
+            width: 50vw;
+            padding-top: 10px;
+        }
+    }
+    .main_about
+    {
+        margin-top: 4rem;
+    }
+    .bild_about
+    {
+        width: 50vw;
+        background-size: contain;
+        
+    }
+  
+
+    
+    
+  
+
+
+   
+    .header_hack
+    {
+        display: none;
+    }
+    .jumbobild
+    {
+        margin-top: 4rem;
+    }
+
+}
+
