@@ -75,7 +75,8 @@ header
         }
     .fa-bars
     {
-        margin-right: 10px;
+        margin-right: 25px;
+        margin-top: 15px;
     }
     
     
@@ -162,14 +163,7 @@ header
                 color: $font_color;
                 text-decoration: none;
                 
-                &::after
-                {
-                    margin-left: 5px;
-                    font-family: "Font Awesome 5 Free"; 
-                    font-weight: 600; 
-                    content: "\f0c1";
-                    color: $special;
-                }
+                
             }
         
         }
@@ -263,6 +257,7 @@ header
             background-size: 80%;
             background-repeat: no-repeat;
             background-position: center center;
+            
         }
     }
     
@@ -287,7 +282,7 @@ header
     {
         
         width: 100vw;
-        height: 60vh;
+        height: 100vh;
         background-image: url(../bilder/modern-abstract-network-science-connection-technology-internet-and-graphic-design-on-hi-tech-future-blue-background-network-for-template-web-design-wallpaper-poster-presentation-illustration-vector.webp);
         background-size: cover;
         background-repeat: no-repeat;
@@ -330,6 +325,18 @@ header
             margin-top: 5px;
             padding-left: 14px;
             text-decoration: underline;
+        }
+        a
+        {
+            color: $font_colortwo;
+            &::after
+                {
+                    margin-left: 5px;
+                    font-family: "Font Awesome 5 Free"; 
+                    font-weight: 600; 
+                    content: "\f0c1";
+                    color: $special;
+                }
         }
         
     }
