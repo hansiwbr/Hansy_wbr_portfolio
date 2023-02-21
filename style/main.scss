@@ -197,7 +197,7 @@ header
                 background-color: $prime_bg_color;
             }
     }
-
+    
     .content_box 
     {
 
@@ -206,10 +206,38 @@ header
         padding: 0px 10px 0px 10px;
     
     }
+    .bild_about
+    {
+        width: 100vw;
+        height: 50vh;
+        
+        background-image: url(../bilder/T7HTC0C6B-U04ARU62AET-a831eaf9655c-512.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        position: relative;
+        box-shadow: rgb(85, 85, 85) 3px 3px 6px 0px inset, rgba(82, 82, 82, 0.5) -3px -3px 6px 1px inset;
+    }
+    .content_container
+    {
+        grid-area: content;
+        h1
+        {
+            text-align: center;
+            font-size: 3rem;
+            line-height: 5rem;
+            font-family: Routtage;
+            width: 100vw;
+            height: 5rem;
+            color: $special;
+            background-color: $prime_bg_color;
+        }
+    }
     .content_about
     {
         
-        grid-area: content;
+        
         display: grid;
         grid-template-columns: 1fr 1fr ;
 
@@ -222,7 +250,7 @@ header
             width: 50vw;
             min-height: 256px;
             padding: 20px;
-            box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+            box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
         
         }
         .html
@@ -232,18 +260,21 @@ header
             background-image: url(../bilder/html-5-svgrepo-com\(1\).png);
             background-size: contain;
             background-repeat: no-repeat;
+            background-position: center center;
         }
         .css
         {
             background-image: url(../bilder/css-3-svgrepo-com.png);
             background-size: contain;
             background-repeat: no-repeat;
+            background-position: center center;
         }
         .scss
         {
             background-image: url(../bilder/sass-svgrepo-com.png);
             background-size: contain;
             background-repeat: no-repeat;
+            background-position: center center;
         }
         
         .git
@@ -251,12 +282,14 @@ header
             background-image: url(../bilder/git-svgrepo-com.png);
             background-size: contain;
             background-repeat: no-repeat;
+            background-position: center center;
         }
         .github
         {
             background-image: url(../bilder/github-svgrepo-com.png);
             background-size: contain;
             background-repeat: no-repeat;
+            background-position: center center;
         }
         .boot
         {
@@ -291,38 +324,33 @@ header
         
         width: 100vw;
         height: 100vh;
-        background-image: url(../bilder/modern-abstract-network-science-connection-technology-internet-and-graphic-design-on-hi-tech-future-blue-background-network-for-template-web-design-wallpaper-poster-presentation-illustration-vector.webp);
+        background-image: url(../bilder/88-883933_php-programing.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position-x: center;
         background-position-y: center;
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
 
     }
-    .bild_about
-    {
-        width: 100vw;
-        height: 50vh;
-        background-image: url(../bilder/T7HTC0C6B-U04ARU62AET-a831eaf9655c-512.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: center;
-        position: relative;
-    }
+    
 
     .jumbobild
     {
         grid-area: jumbobild;
+        
+        
+
     }
     .jumbo_text
     {
         
-        position: absolute;
-        margin: 0 auto;
-        top: 40%;
-        bottom: 50%;
-        left: 30%;
+        width: 20rem;
+        background-color: $special;
+        opacity: 90%;
         color: $font_colortwo;
         h1 
         {
@@ -373,7 +401,7 @@ header
                 
                 background-color: $prime_bg_color;
                 margin: 0 auto;
-                color: $font_colortwo;
+                color: $special;
             }
 
     
@@ -391,6 +419,7 @@ header
             text-align: center;
             z-index: 100;
             margin-bottom: 20px;
+            margin-top: 10px;
         }
         & a
         {
@@ -442,7 +471,7 @@ header
     .ref_description
     {
         width: 400px;
-        padding-left: 10px;
+        padding-left: 20px;
         background-color: $font_colortwo;
         color: $prime_bg_color;
         
@@ -505,7 +534,7 @@ header
         .header_desktop_logo, .header_desktop_box 
         {
             margin: 0 auto;
-            text-align: center;
+            
             padding-top: 20px;
             
         }
@@ -517,12 +546,14 @@ header
             width: 100%;
             color: $prime_bg_color;
             font-family: Routtage, sans-serif;
+            padding-left: 7rem;
             font-size: 3rem;
             line-height: 2rem;
             box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
         }
         .header_desktop_box
         {
+            font-size: 1.7rem;
             background-color: $font_colortwo;
             width: 100%;
             box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
@@ -554,6 +585,17 @@ header
         background-size: contain;
         
     }
+    .content_about
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .skillbox
+        {
+            width: 25rem;
+            min-height: 15rem;
+        }
+    }
   
 
     
@@ -570,6 +612,7 @@ header
     {
         margin-top: 4rem;
     }
+    
     .bild_ref
     {
         margin-top: 4rem;
@@ -599,8 +642,8 @@ header
           
             .main_box_ref
             {
-                width: 30vw;
-                height: 30vh;
+                width: 20rem;
+                height: 15rem;
             }
             & a::after
             {

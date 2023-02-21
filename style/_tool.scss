@@ -35,7 +35,7 @@
             {
                 text-decoration: none;
                 color: $font_color;
-                padding-left: 15px;
+                padding: 0px 20px 0 20px;
                 font-family: Routtage, sans-serif;
                 
                 
@@ -47,6 +47,7 @@
                 {
                     
                     color: $special;
+                    border-bottom: 2px solid $special;
                     
                   
                     

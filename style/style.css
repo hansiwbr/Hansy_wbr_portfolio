@@ -149,8 +149,33 @@ header {
   padding: 0px 10px 0px 10px;
 }
 
-.content_about {
+.bild_about {
+  width: 100vw;
+  height: 50vh;
+  background-image: url(../bilder/T7HTC0C6B-U04ARU62AET-a831eaf9655c-512.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  position: relative;
+  box-shadow: rgb(85, 85, 85) 3px 3px 6px 0px inset, rgba(82, 82, 82, 0.5) -3px -3px 6px 1px inset;
+}
+
+.content_container {
   grid-area: content;
+}
+.content_container h1 {
+  text-align: center;
+  font-size: 3rem;
+  line-height: 5rem;
+  font-family: Routtage;
+  width: 100vw;
+  height: 5rem;
+  color: #19bb98;
+  background-color: #3a3a3a;
+}
+
+.content_about {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100%;
@@ -159,32 +184,37 @@ header {
   width: 50vw;
   min-height: 256px;
   padding: 20px;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
 .content_about .html {
   background-image: url(../bilder/html-5-svgrepo-com\(1\).png);
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center center;
 }
 .content_about .css {
   background-image: url(../bilder/css-3-svgrepo-com.png);
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center center;
 }
 .content_about .scss {
   background-image: url(../bilder/sass-svgrepo-com.png);
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center center;
 }
 .content_about .git {
   background-image: url(../bilder/git-svgrepo-com.png);
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center center;
 }
 .content_about .github {
   background-image: url(../bilder/github-svgrepo-com.png);
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center center;
 }
 .content_about .boot {
   background-image: url(../bilder/bootstrap-svgrepo-com.png);
@@ -208,23 +238,15 @@ header {
 .bild {
   width: 100vw;
   height: 100vh;
-  background-image: url(../bilder/modern-abstract-network-science-connection-technology-internet-and-graphic-design-on-hi-tech-future-blue-background-network-for-template-web-design-wallpaper-poster-presentation-illustration-vector.webp);
+  background-image: url(../bilder/88-883933_php-programing.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
   position: relative;
-}
-
-.bild_about {
-  width: 100vw;
-  height: 50vh;
-  background-image: url(../bilder/T7HTC0C6B-U04ARU62AET-a831eaf9655c-512.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .jumbobild {
@@ -232,11 +254,9 @@ header {
 }
 
 .jumbo_text {
-  position: absolute;
-  margin: 0 auto;
-  top: 40%;
-  bottom: 50%;
-  left: 30%;
+  width: 20rem;
+  background-color: #19bb98;
+  opacity: 90%;
   color: #fafafa;
 }
 .jumbo_text h1 {
@@ -278,7 +298,7 @@ header {
 .ref_container aside:nth-of-type(odd) {
   background-color: #3a3a3a;
   margin: 0 auto;
-  color: #fafafa;
+  color: #19bb98;
 }
 .ref_container .main_ref_box {
   width: 100vw;
@@ -293,6 +313,7 @@ header {
   text-align: center;
   z-index: 100;
   margin-bottom: 20px;
+  margin-top: 10px;
 }
 .ref_container .main_ref_box a {
   text-decoration: none;
@@ -332,7 +353,7 @@ header {
 }
 .ref_container .ref_description {
   width: 400px;
-  padding-left: 10px;
+  padding-left: 20px;
   background-color: #fafafa;
   color: #3a3a3a;
 }
@@ -365,7 +386,6 @@ header {
   }
   .header_desktop .header_desktop_logo, .header_desktop .header_desktop_box {
     margin: 0 auto;
-    text-align: center;
     padding-top: 20px;
   }
   .header_desktop .header_desktop_logo {
@@ -373,11 +393,13 @@ header {
     width: 100%;
     color: #3a3a3a;
     font-family: Routtage, sans-serif;
+    padding-left: 7rem;
     font-size: 3rem;
     line-height: 2rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
   }
   .header_desktop .header_desktop_box {
+    font-size: 1.7rem;
     background-color: #fafafa;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
@@ -385,7 +407,7 @@ header {
   .header_desktop .header_desktop_box a {
     text-decoration: none;
     color: #131212;
-    padding-left: 15px;
+    padding: 0px 20px 0 20px;
     font-family: Routtage, sans-serif;
     transition-property: color, border-left;
     transition-duration: 200ms;
@@ -393,6 +415,7 @@ header {
   }
   .header_desktop .header_desktop_box a:hover {
     color: #19bb98;
+    border-bottom: 2px solid #19bb98;
   }
   .main {
     flex-direction: row;
@@ -409,6 +432,15 @@ header {
   .bild_about {
     width: 50vw;
     background-size: contain;
+  }
+  .content_about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .content_about .skillbox {
+    width: 25rem;
+    min-height: 15rem;
   }
   .header_hack {
     display: none;
@@ -434,8 +466,8 @@ header {
     width: 33.33%;
   }
   .ref_container .main_ref_box .main_box_ref {
-    width: 30vw;
-    height: 30vh;
+    width: 20rem;
+    height: 15rem;
   }
   .ref_container .main_ref_box a::after {
     right: 24px;
