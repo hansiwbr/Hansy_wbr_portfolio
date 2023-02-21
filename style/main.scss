@@ -1,12 +1,19 @@
 @use "./vari.scss" as *;
 @use "./tool.scss" as *;
+@font-face 
+{
+    font-family: Routtage;
+    src: url(../fonts/Routtage.ttf);
+}
 
 *
 {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    
 }
+
 
 header
     {
@@ -59,8 +66,9 @@ header
             color: $prime_bg_color;
             text-align: center;
             margin: 0 auto;
-            line-height: 2.5rem;
+            line-height: 3.2rem;
             font-size: 2rem;
+            font-family: Routtage, sans-serif;
         }
         .nav {
             display: none;
@@ -215,7 +223,6 @@ header
             min-height: 256px;
             padding: 20px;
             box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-            
         
         }
         .html
@@ -275,6 +282,7 @@ header
         text-align: center;
         padding: 12px;
         width: 100vw;
+        border-top: 1px solid $font_color;
       
     }
 
@@ -350,42 +358,25 @@ header
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
-    position: relative; 
+    margin: 0;
 }
-.main_ref
+.ref_container
 {
     width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    color: $prime_bg_color;
+    display: grid;
+    grid-template-columns: 1fr;
+    
+  
     & aside:nth-of-type(odd)
             {
                 
                 background-color: $prime_bg_color;
                 margin: 0 auto;
+                color: $font_colortwo;
             }
 
-    .hzwo
-    {
-        text-align: center;
-    }
-    & a
-    {
-        text-decoration: none;
-        color: $prime_bg_color;
-        text-align: center;
-        position: relative;
-        &::after
-                {
-                    font-family: "Font Awesome 5 Free"; 
-                    font-weight: 600; 
-                    content: "\f0c1";
-                    color: $special;
-                    position: absolute;
-                    right: 12px;
-                    top: 12px;
-                }
-    }
+    
     .main_ref_box
     {
         width: 100vw;
@@ -394,12 +385,45 @@ header
         align-items: center;
         flex-direction: column;
         padding-bottom: 1.2rem;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        .hzwo
+        {
+            text-align: center;
+            z-index: 100;
+            margin-bottom: 20px;
+        }
+        & a
+        {
+            text-decoration: none;
+            color: $prime_bg_color;
+            text-align: center;
+            position: relative;
+            &::after
+                {
+                    font-family: "Font Awesome 5 Free"; 
+                    font-weight: 600; 
+                    content: "\f0c1";
+                    color: $special;
+                    position: absolute;
+                    right: 12px;
+                    top: 12px;
+                    
+                }
+        }
+        .main_box_ref
+        {
+            width: 400px;
+            height: 400px;
+            box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+            &:hover
+            {
+                scale: 1.05;
+                z-index: 1000;
+            }
+            
+        }
     }
-    .main_box_ref
-    {
-        height: 50vh;
-        
-    }
+  
     .erste
     {
         background: url(../bilder/Bildschirmfoto\ vom\ 2023-02-21\ 09-06-23.png);
@@ -414,6 +438,23 @@ header
     {
         background: url(../bilder/Bildschirmfoto\ vom\ 2023-02-21\ 09-07-25.png);
         background-size: cover;
+    }
+    .ref_description
+    {
+        width: 400px;
+        padding-left: 10px;
+        background-color: $font_colortwo;
+        color: $prime_bg_color;
+        
+        h3 
+        {
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        p 
+        {
+            margin-bottom: 10px;
+        }
     }
 }    
 
@@ -460,30 +501,31 @@ header
         position: fixed;
         top: 0;
         opacity: 98%;
+        
         .header_desktop_logo, .header_desktop_box 
         {
             margin: 0 auto;
             text-align: center;
             padding-top: 20px;
+            
         }
         
+      
         .header_desktop_logo
         {
-            background-color: rgb(71, 71, 71);
+            background-color: $font_colortwo;
             width: 100%;
-            color: white;
-            font-size: 2rem;
-        
-        }
-        .header_desktop_logo
-        {
-            background-color: $sec_bg_color;
+            color: $prime_bg_color;
+            font-family: Routtage, sans-serif;
+            font-size: 3rem;
+            line-height: 2rem;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
         }
         .header_desktop_box
         {
             background-color: $font_colortwo;
             width: 100%;
-            // box-shadow: inset 1px 0px 20px black;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
             @include nav_box_hover_desktop;
             
         }
@@ -528,22 +570,45 @@ header
     {
         margin-top: 4rem;
     }
-
-}
-
-.main_ref
-{
-    
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    .main_box_ref
+    .bild_ref
     {
-        width: 400px;
-        height: 400px;
+        margin-top: 4rem;
+    }
+    .ref_container
+    {
+        background-color: $font_colortwo;
+        // padding-top: 20px;
+        // padding-bottom: 20px;
+        display: flex;
+        justify-content: space-around;
+        // flex-wrap: wrap;
         
+        color: $prime_bg_color;
+        & aside:nth-of-type(odd)
+        {
+            
+            background-color: $font_colortwo;
+            margin: 0 auto;
+            color: $prime_bg_color;
+        }
+        
+        
+        .main_ref_box
+        {
+            width: 33.33%;
+          
+            .main_box_ref
+            {
+                width: 30vw;
+                height: 30vh;
+            }
+            & a::after
+            {
+                right: 24px;
+            }
+        }
     }
 }
+
+
 

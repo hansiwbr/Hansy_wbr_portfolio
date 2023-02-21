@@ -8,9 +8,9 @@
                 text-decoration: none;
                 
                 color: $sec_bg_color;
-                padding-left: 15px;
+                padding: 0px 20px 0 20px;
                 font-size: larger;
-                border-left: 2px solid $sec_bg_color;
+                font-family: Routtage, sans-serif;
                 
                 transition-property: color , border-left;
                 transition-duration: 200ms;
@@ -20,7 +20,7 @@
                 {
                     
                     color: $special;
-                    border-left: 2px solid $special;
+                    border-bottom: 2px solid $special;
                     
                     
                     
@@ -36,8 +36,9 @@
                 text-decoration: none;
                 color: $font_color;
                 padding-left: 15px;
+                font-family: Routtage, sans-serif;
                 
-                border-left: 2px solid $font_color;
+                
                 transition-property: color , border-left;
                 transition-duration: 200ms;
                 transition-timing-function: ease-in-out;
@@ -46,7 +47,7 @@
                 {
                     
                     color: $special;
-                    border-left: 2px solid $special;
+                    
                   
                     
                     
