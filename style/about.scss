@@ -1,0 +1,120 @@
+@use "./vari.scss" as *;
+@use "./tool.scss" as *;
+
+.content_container
+{
+    grid-area: content;
+    h1
+    {
+        text-align: center;
+        font-size: 3rem;
+        line-height: 5rem;
+        font-family: Routtage;
+        width: 100vw;
+        height: 5rem;
+        color: $special;
+        background-color: $prime_bg_color;
+    }
+}
+
+.content_about
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    width: 100%;
+    .skillbox
+    {
+        width: 50vw;
+        min-height: 256px;
+        padding: 20px;
+        box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    }
+    .html
+    {
+        background-image: url(../bilder/html-5-svgrepo-com\(1\).png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .css
+    {
+        background-image: url(../bilder/css-3-svgrepo-com.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .scss
+    {
+        background-image: url(../bilder/sass-svgrepo-com.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    
+    .git
+    {
+        background-image: url(../bilder/git-svgrepo-com.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .github
+    {
+        background-image: url(../bilder/github-svgrepo-com.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .boot
+    {
+        background-image: url(../bilder/bootstrap-svgrepo-com.png);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        
+    }
+}
+.bild_about
+{
+    width: 100vw;
+    height: 50vh;
+    background-image: url(../bilder/T7HTC0C6B-U04ARU62AET-a831eaf9655c-512.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    position: relative;
+    box-shadow: rgb(85, 85, 85) 3px 3px 6px 0px inset, rgba(82, 82, 82, 0.5) -3px -3px 6px 1px inset;
+}
+
+@media (min-width: 1000px)
+{
+    .main_about
+    {
+        margin-top: 4rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        .main_box
+        {
+            width: 50vw;
+            padding-top: 10px;
+        }
+    }
+   .bild_about
+    {
+        width: 50vw;
+        background-size: contain; 
+    }
+    .content_about
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .skillbox
+        {
+            width: 25rem;
+            min-height: 15rem;
+        }
+    }
+}

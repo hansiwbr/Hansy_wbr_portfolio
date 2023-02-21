@@ -1,0 +1,155 @@
+@use "./vari.scss" as *;
+@use "./tool.scss" as *;
+
+
+.bild_ref
+{
+    width: 100vw;
+    height: 50vh;
+    background-image: url(../bilder/1658350.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    margin: 0;
+}
+.ref_container
+{
+    width: 100vw;
+    color: $prime_bg_color;
+    display: grid;
+    grid-template-columns: 1fr;
+    
+  
+    & aside:nth-of-type(odd)
+            {
+                
+                background-color: $prime_bg_color;
+                margin: 0 auto;
+                color: $special;
+            }
+
+    
+    .main_ref_box
+    {
+        width: 100vw;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 1.2rem;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        .hzwo
+        {
+            text-align: center;
+            z-index: 100;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+        & a
+        {
+            text-decoration: none;
+            color: $prime_bg_color;
+            text-align: center;
+            position: relative;
+            &::after
+                {
+                    font-family: "Font Awesome 5 Free"; 
+                    font-weight: 600; 
+                    content: "\f0c1";
+                    color: $special;
+                    position: absolute;
+                    right: 12px;
+                    top: 12px;
+                    
+                }
+        }
+        .main_box_ref
+        {
+            width: 400px;
+            height: 400px;
+            box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+            &:hover
+            {
+                scale: 1.05;
+                z-index: 1000;
+            }
+            
+        }
+    }
+  
+    .erste
+    {
+        background: url(../bilder/Bildschirmfoto\ vom\ 2023-02-21\ 09-06-23.png);
+        background-size: contain;
+    }
+    .zweite
+    {
+        background: url(../bilder/Bildschirmfoto\ vom\ 2023-02-21\ 09-07-04.png);
+        background-size: cover;
+    }
+    .dritte
+    {
+        background: url(../bilder/Bildschirmfoto\ vom\ 2023-02-21\ 09-07-25.png);
+        background-size: cover;
+    }
+    .ref_description
+    {
+        width: 400px;
+        padding-left: 20px;
+        background-color: $font_colortwo;
+        color: $prime_bg_color;
+        
+        h3 
+        {
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        p 
+        {
+            margin-bottom: 10px;
+        }
+    }
+}    
+
+@media (min-width: 1000px)
+{
+.bild_ref
+    {
+        margin-top: 4rem;
+    }
+    .ref_container
+    {
+        background-color: $font_colortwo;
+        // padding-top: 20px;
+        // padding-bottom: 20px;
+        display: flex;
+        justify-content: space-around;
+        // flex-wrap: wrap;
+        
+        color: $prime_bg_color;
+        & aside:nth-of-type(odd)
+        {
+            
+            background-color: $font_colortwo;
+            margin: 0 auto;
+            color: $prime_bg_color;
+        }
+        
+        
+        .main_ref_box
+        {
+            width: 33.33%;
+          
+            .main_box_ref
+            {
+                width: 20rem;
+                height: 15rem;
+            }
+            & a::after
+            {
+                right: 24px;
+            }
+        }
+    }
+}    

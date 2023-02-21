@@ -1,0 +1,149 @@
+@use "./vari.scss" as *;
+@use "./tool.scss" as *;
+
+
+header
+{
+    z-index: 999;
+    position: relative;
+}
+
+
+.header_desktop
+{
+    display: none;
+}
+.header
+{
+    position: fixed;
+    grid-area: header;
+    background-color: $sec_bg_color;
+    opacity: 90%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    height: 50px;
+    width: 100vw;
+    text-align: center;
+    line-height: 2rem;
+    
+    .header_logo
+    {
+        background-color: $sec_bg_color;
+        width: 100vw;
+        color: $prime_bg_color;
+        text-align: center;
+        margin: 0 auto;
+        line-height: 3.2rem;
+        font-size: 2rem;
+        font-family: Routtage, sans-serif !important;
+    }
+    .nav 
+    {
+        display: none;
+    }
+        
+    #hamburger-menu
+    {
+        display: none;
+    }
+        
+    #hamburger-menu:checked ~ .nav 
+    {
+        display: block;
+    }
+    .fa-bars
+    {
+        margin-right: 25px;
+        margin-top: 15px;
+    }
+    
+    
+    .header_container
+    {
+        width: 100vw;
+     
+        
+       
+        text-align: end;
+        margin-right: 5px;
+      
+       
+        .header_menu
+        {
+            background-color: $prime_bg_color;
+            text-align: center;
+            margin-right: -5px;
+            left: 0;
+            top: 50px;
+            position: absolute;
+            width: 100vw;
+           
+            
+            
+            
+        }
+        .header_box
+        {
+            margin-bottom: 20px;
+            width: 100vw;
+            @include nav_box_hover;
+        }
+    }    
+      
+}
+.one
+{
+    margin-top: 20px;
+}
+
+.header_hack
+{
+    height: 50px;
+    background-color: $sec_bg_color;
+    width: 100vw;
+}
+@media (min-width: 1000px)
+{
+    .header
+    {
+        display: none;
+    }
+
+    .header_desktop
+    {
+        width: 100vw;
+        height: 4rem;
+        display: grid;
+        grid-template-columns: 
+        3fr 1fr 1fr 1fr 1fr;
+        position: fixed;
+        top: 0;
+        opacity: 98%;
+        .header_desktop_logo
+        {
+            margin: 0 auto;
+            padding-top: 20px;
+            background-color: $font_colortwo;
+            width: 100%;
+            color: $prime_bg_color;
+            font-family: Routtage, sans-serif;
+            padding-left: 7rem;
+            font-size: 3rem;
+            line-height: 2rem;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+        }
+        .header_desktop_box
+        {
+            margin: 0 auto;
+            padding-top: 20px;
+            font-size: 1.7rem;
+            background-color: $font_colortwo;
+            width: 100%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+            @include nav_box_hover_desktop;
+            
+        }
+
+    }    
+}

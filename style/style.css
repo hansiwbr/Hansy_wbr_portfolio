@@ -1,24 +1,6 @@
-@font-face {
-  font-family: Routtage;
-  src: url(../fonts/Routtage.ttf);
-}
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 header {
   z-index: 999;
   position: relative;
-}
-
-.body {
-  z-index: -1;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas: "jumbobild jumbobild jumbobild jumbobild" "main main main main" "main main main main" "main main main main" "content content content content" "content content content content" "footer footer footer footer";
 }
 
 .header_desktop {
@@ -46,7 +28,7 @@ header {
   margin: 0 auto;
   line-height: 3.2rem;
   font-size: 2rem;
-  font-family: Routtage, sans-serif;
+  font-family: Routtage, sans-serif !important;
 }
 .header .nav {
   display: none;
@@ -104,180 +86,53 @@ header {
   width: 100vw;
 }
 
-.main {
-  grid-area: main;
-  background-color: #fafafa;
-  color: #131212;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+@media (min-width: 1000px) {
+  .header {
+    display: none;
+  }
+  .header_desktop {
+    width: 100vw;
+    height: 4rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+    position: fixed;
+    top: 0;
+    opacity: 98%;
+  }
+  .header_desktop .header_desktop_logo {
+    margin: 0 auto;
+    padding-top: 20px;
+    background-color: #fafafa;
+    width: 100%;
+    color: #3a3a3a;
+    font-family: Routtage, sans-serif;
+    padding-left: 7rem;
+    font-size: 3rem;
+    line-height: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+  }
+  .header_desktop .header_desktop_box {
+    margin: 0 auto;
+    padding-top: 20px;
+    font-size: 1.7rem;
+    background-color: #fafafa;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+  }
+  .header_desktop .header_desktop_box a {
+    text-decoration: none;
+    color: #131212;
+    padding: 0px 20px 0 20px;
+    font-family: Routtage, sans-serif;
+    transition-property: color, border-left;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+  }
+  .header_desktop .header_desktop_box a:hover {
+    color: #19bb98;
+    border-bottom: 2px solid #19bb98;
+  }
 }
-.main div:nth-child(even) {
-  background-color: #3a3a3a;
-  color: #19bb98;
-}
-
-.main_box {
-  width: 100vw;
-}
-.main_box p, .main_box h2 {
-  padding: 0px 10px 0px 10px;
-}
-.main_box p a, .main_box h2 a {
-  color: #131212;
-  text-decoration: none;
-}
-
-.content {
-  grid-area: content;
-  width: 100vw;
-  background-color: #fafafa;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-.content div:nth-child(even) {
-  width: 100%;
-  background-color: #3a3a3a;
-}
-
-.content_box {
-  margin-bottom: 10px;
-  width: 100%;
-  padding: 0px 10px 0px 10px;
-}
-
-.bild_about {
-  width: 100vw;
-  height: 50vh;
-  background-image: url(../bilder/T7HTC0C6B-U04ARU62AET-a831eaf9655c-512.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  position: relative;
-  box-shadow: rgb(85, 85, 85) 3px 3px 6px 0px inset, rgba(82, 82, 82, 0.5) -3px -3px 6px 1px inset;
-}
-
-.content_container {
-  grid-area: content;
-}
-.content_container h1 {
-  text-align: center;
-  font-size: 3rem;
-  line-height: 5rem;
-  font-family: Routtage;
-  width: 100vw;
-  height: 5rem;
-  color: #19bb98;
-  background-color: #3a3a3a;
-}
-
-.content_about {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
-}
-.content_about .skillbox {
-  width: 50vw;
-  min-height: 256px;
-  padding: 20px;
-  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-}
-.content_about .html {
-  background-image: url(../bilder/html-5-svgrepo-com\(1\).png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-.content_about .css {
-  background-image: url(../bilder/css-3-svgrepo-com.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-.content_about .scss {
-  background-image: url(../bilder/sass-svgrepo-com.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-.content_about .git {
-  background-image: url(../bilder/git-svgrepo-com.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-.content_about .github {
-  background-image: url(../bilder/github-svgrepo-com.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-.content_about .boot {
-  background-image: url(../bilder/bootstrap-svgrepo-com.png);
-  background-size: 80%;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.footer {
-  grid-area: footer;
-  background-color: #3a3a3a;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  text-align: center;
-  padding: 12px;
-  width: 100vw;
-  border-top: 1px solid #131212;
-}
-
-.bild {
-  width: 100vw;
-  height: 100vh;
-  background-image: url(../bilder/88-883933_php-programing.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.jumbobild {
-  grid-area: jumbobild;
-}
-
-.jumbo_text {
-  width: 20rem;
-  background-color: #19bb98;
-  opacity: 90%;
-  color: #fafafa;
-}
-.jumbo_text h1 {
-  font-size: 48px;
-}
-.jumbo_text p {
-  margin-top: 5px;
-  padding-left: 14px;
-  text-decoration: underline;
-}
-.jumbo_text a {
-  color: #fafafa;
-}
-.jumbo_text a::after {
-  margin-left: 5px;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 600;
-  content: "\f0c1";
-  color: #19bb98;
-}
-
 .bild_ref {
   width: 100vw;
   height: 50vh;
@@ -366,88 +221,6 @@ header {
 }
 
 @media (min-width: 1000px) {
-  .body {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "jumbobild jumbobild jumbobild jumbobild" "main main main main" "main main main main" "main main main main" "content content content content" "content content content content" "footer footer footer footer";
-  }
-  .header {
-    display: none;
-  }
-  .header_desktop {
-    width: 100vw;
-    height: 4rem;
-    display: grid;
-    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
-    position: fixed;
-    top: 0;
-    opacity: 98%;
-  }
-  .header_desktop .header_desktop_logo, .header_desktop .header_desktop_box {
-    margin: 0 auto;
-    padding-top: 20px;
-  }
-  .header_desktop .header_desktop_logo {
-    background-color: #fafafa;
-    width: 100%;
-    color: #3a3a3a;
-    font-family: Routtage, sans-serif;
-    padding-left: 7rem;
-    font-size: 3rem;
-    line-height: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
-  }
-  .header_desktop .header_desktop_box {
-    font-size: 1.7rem;
-    background-color: #fafafa;
-    width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
-  }
-  .header_desktop .header_desktop_box a {
-    text-decoration: none;
-    color: #131212;
-    padding: 0px 20px 0 20px;
-    font-family: Routtage, sans-serif;
-    transition-property: color, border-left;
-    transition-duration: 200ms;
-    transition-timing-function: ease-in-out;
-  }
-  .header_desktop .header_desktop_box a:hover {
-    color: #19bb98;
-    border-bottom: 2px solid #19bb98;
-  }
-  .main {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-  .main .main_box {
-    width: 50vw;
-    padding-top: 10px;
-  }
-  .main_about {
-    margin-top: 4rem;
-  }
-  .bild_about {
-    width: 50vw;
-    background-size: contain;
-  }
-  .content_about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .content_about .skillbox {
-    width: 25rem;
-    min-height: 15rem;
-  }
-  .header_hack {
-    display: none;
-  }
-  .jumbobild {
-    margin-top: 4rem;
-  }
   .bild_ref {
     margin-top: 4rem;
   }
@@ -471,6 +244,242 @@ header {
   }
   .ref_container .main_ref_box a::after {
     right: 24px;
+  }
+}
+.content_container {
+  grid-area: content;
+}
+.content_container h1 {
+  text-align: center;
+  font-size: 3rem;
+  line-height: 5rem;
+  font-family: Routtage;
+  width: 100vw;
+  height: 5rem;
+  color: #19bb98;
+  background-color: #3a3a3a;
+}
+
+.content_about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+.content_about .skillbox {
+  width: 50vw;
+  min-height: 256px;
+  padding: 20px;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+.content_about .html {
+  background-image: url(../bilder/html-5-svgrepo-com\(1\).png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.content_about .css {
+  background-image: url(../bilder/css-3-svgrepo-com.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.content_about .scss {
+  background-image: url(../bilder/sass-svgrepo-com.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.content_about .git {
+  background-image: url(../bilder/git-svgrepo-com.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.content_about .github {
+  background-image: url(../bilder/github-svgrepo-com.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.content_about .boot {
+  background-image: url(../bilder/bootstrap-svgrepo-com.png);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.bild_about {
+  width: 100vw;
+  height: 50vh;
+  background-image: url(../bilder/T7HTC0C6B-U04ARU62AET-a831eaf9655c-512.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  position: relative;
+  box-shadow: rgb(85, 85, 85) 3px 3px 6px 0px inset, rgba(82, 82, 82, 0.5) -3px -3px 6px 1px inset;
+}
+
+@media (min-width: 1000px) {
+  .main_about {
+    margin-top: 4rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .main_about .main_box {
+    width: 50vw;
+    padding-top: 10px;
+  }
+  .bild_about {
+    width: 50vw;
+    background-size: contain;
+  }
+  .content_about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .content_about .skillbox {
+    width: 25rem;
+    min-height: 15rem;
+  }
+}
+@font-face {
+  font-family: Routtage;
+  src: url(../fonts/Routtage.ttf);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.body {
+  z-index: -1;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "jumbobild jumbobild jumbobild jumbobild" "main main main main" "main main main main" "main main main main" "content content content content" "content content content content" "footer footer footer footer";
+}
+
+.main {
+  grid-area: main;
+  background-color: #fafafa;
+  color: #131212;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.main .main_box {
+  width: 100vw;
+}
+.main .main_box p, .main .main_box h2 {
+  padding: 0px 10px 0px 10px;
+}
+.main .main_box p a, .main .main_box h2 a {
+  color: #131212;
+  text-decoration: none;
+}
+.main div:nth-child(even) {
+  background-color: #3a3a3a;
+  color: #19bb98;
+}
+
+.content {
+  grid-area: content;
+  width: 100vw;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.content .content_box {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 0px 10px 0px 10px;
+}
+.content div:nth-child(even) {
+  width: 100%;
+  background-color: #3a3a3a;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #3a3a3a;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  padding: 12px;
+  width: 100vw;
+  border-top: 1px solid #131212;
+}
+
+.jumbobild {
+  grid-area: jumbobild;
+}
+.jumbobild .bild {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../bilder/88-883933_php-programing.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.jumbobild .bild .jumbo_text {
+  width: 20rem;
+  background-color: #19bb98;
+  opacity: 90%;
+  color: #fafafa;
+}
+.jumbobild .bild .jumbo_text h1 {
+  font-size: 48px;
+}
+.jumbobild .bild .jumbo_text p {
+  margin-top: 5px;
+  padding-left: 14px;
+  text-decoration: underline;
+}
+.jumbobild .bild .jumbo_text a {
+  color: #fafafa;
+}
+.jumbobild .bild .jumbo_text a::after {
+  margin-left: 5px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  content: "\f0c1";
+  color: #19bb98;
+}
+
+@media (min-width: 1000px) {
+  .body {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "jumbobild jumbobild jumbobild jumbobild" "main main main main" "main main main main" "main main main main" "content content content content" "content content content content" "footer footer footer footer";
+  }
+  .main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .main .main_box {
+    width: 50vw;
+    padding-top: 10px;
+  }
+  .header_hack {
+    display: none;
+  }
+  .jumbobild {
+    margin-top: 4rem;
   }
 }
 
