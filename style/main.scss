@@ -341,6 +341,81 @@ header
         
     }
     
+.bild_ref
+{
+    width: 100vw;
+    height: 50vh;
+    background-image: url(../bilder/1658350.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    position: relative; 
+}
+.main_ref
+{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    & aside:nth-of-type(odd)
+            {
+                
+                background-color: $prime_bg_color;
+                margin: 0 auto;
+            }
+
+    .hzwo
+    {
+        text-align: center;
+    }
+    & a
+    {
+        text-decoration: none;
+        color: $prime_bg_color;
+        text-align: center;
+        position: relative;
+        &::after
+                {
+                    font-family: "Font Awesome 5 Free"; 
+                    font-weight: 600; 
+                    content: "\f0c1";
+                    color: $special;
+                    position: absolute;
+                    right: 12px;
+                    top: 12px;
+                }
+    }
+    .main_ref_box
+    {
+        width: 100vw;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 1.2rem;
+    }
+    .main_box_ref
+    {
+        height: 50vh;
+        
+    }
+    .erste
+    {
+        background: url(../bilder/Bildschirmfoto\ vom\ 2023-02-21\ 09-06-23.png);
+        background-size: contain;
+    }
+    .zweite
+    {
+        background: url(../bilder/Bildschirmfoto\ vom\ 2023-02-21\ 09-07-04.png);
+        background-size: cover;
+    }
+    .dritte
+    {
+        background: url(../bilder/Bildschirmfoto\ vom\ 2023-02-21\ 09-07-25.png);
+        background-size: cover;
+    }
+}    
 
 
 
@@ -454,5 +529,21 @@ header
         margin-top: 4rem;
     }
 
+}
+
+.main_ref
+{
+    
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    .main_box_ref
+    {
+        width: 400px;
+        height: 400px;
+        
+    }
 }
 

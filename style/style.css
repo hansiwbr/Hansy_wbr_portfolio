@@ -252,6 +252,69 @@ header {
   color: #19bb98;
 }
 
+.bild_ref {
+  width: 100vw;
+  height: 50vh;
+  background-image: url(../bilder/1658350.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  position: relative;
+}
+
+.main_ref {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.main_ref aside:nth-of-type(odd) {
+  background-color: #3a3a3a;
+  margin: 0 auto;
+}
+.main_ref .hzwo {
+  text-align: center;
+}
+.main_ref a {
+  text-decoration: none;
+  color: #3a3a3a;
+  text-align: center;
+  position: relative;
+}
+.main_ref a::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  content: "\f0c1";
+  color: #19bb98;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+.main_ref .main_ref_box {
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 1.2rem;
+}
+.main_ref .main_box_ref {
+  height: 50vh;
+}
+.main_ref .erste {
+  background: url(../bilder/Bildschirmfoto\ vom\ 2023-02-21\ 09-06-23.png);
+  background-size: contain;
+}
+.main_ref .zweite {
+  background: url(../bilder/Bildschirmfoto\ vom\ 2023-02-21\ 09-07-04.png);
+  background-size: cover;
+}
+.main_ref .dritte {
+  background: url(../bilder/Bildschirmfoto\ vom\ 2023-02-21\ 09-07-25.png);
+  background-size: cover;
+}
+
 @media (min-width: 1000px) {
   .body {
     width: 100%;
@@ -324,6 +387,17 @@ header {
   .jumbobild {
     margin-top: 4rem;
   }
+}
+.main_ref {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.main_ref .main_box_ref {
+  width: 400px;
+  height: 400px;
 }
 
 /*# sourceMappingURL=style.css.map */
