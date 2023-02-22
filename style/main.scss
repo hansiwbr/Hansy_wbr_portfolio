@@ -107,7 +107,23 @@ p, h2, h3
     padding: 12px;
     width: 100vw;
     border-top: 1px solid $font_color;
+    .footer_text
+    {
+        color: $special;
+    }
+    .footer_container
+    {
+        display: flex;
+        justify-content: space-between;
+        gap: 10rem;
+        font-size: 2rem;
+        a
+        {
+            color: $special;
+        }
+    }
 }
+
 
 
 

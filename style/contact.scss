@@ -27,7 +27,7 @@
 }
 #contact::after 
 {
-content: "";
+    content: "";
     display: block;
     height: 30px;
     width: 90%;
@@ -269,9 +269,9 @@ content: '';
 
 @media (max-width: 1000px)
 {
-#contact {
+#contact 
+{
     width: 100%;
-    padding-right: 1rem;
 
 }
 .input_wrapper label 

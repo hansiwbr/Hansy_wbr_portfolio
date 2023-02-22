@@ -624,7 +624,6 @@ header {
 @media (max-width: 1000px) {
   #contact {
     width: 100%;
-    padding-right: 1rem;
   }
   .input_wrapper label {
     line-height: 3.5em;
@@ -707,6 +706,18 @@ p, h2, h3 {
   padding: 12px;
   width: 100vw;
   border-top: 1px solid #131212;
+}
+.footer .footer_text {
+  color: #19bb98;
+}
+.footer .footer_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10rem;
+  font-size: 2rem;
+}
+.footer .footer_container a {
+  color: #19bb98;
 }
 
 .jumbobild {
