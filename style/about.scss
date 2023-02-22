@@ -4,7 +4,7 @@
 .content_container
 {
     grid-area: content;
-    h1
+    h2
     {
         text-align: center;
         font-size: 3rem;
@@ -16,7 +16,6 @@
         background-color: $prime_bg_color;
     }
 }
-
 .content_about
 {
     display: grid;

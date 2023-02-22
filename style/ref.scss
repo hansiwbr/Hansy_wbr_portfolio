@@ -82,16 +82,19 @@
     {
         background: url(../bilder/Bildschirmfoto\ vom\ 2023-02-21\ 09-06-23.png);
         background-size: contain;
+        grid-area: erste;
     }
     .zweite
     {
         background: url(../bilder/Bildschirmfoto\ vom\ 2023-02-21\ 09-07-04.png);
         background-size: cover;
+        grid-area: zweite;
     }
     .dritte
     {
         background: url(../bilder/Bildschirmfoto\ vom\ 2023-02-21\ 09-07-25.png);
         background-size: cover;
+        grid-area: dritte;
     }
     .ref_description
     {
@@ -120,12 +123,14 @@
     }
     .ref_container
     {
+        width: 100vw;
         background-color: $font_colortwo;
         // padding-top: 20px;
         // padding-bottom: 20px;
-        display: flex;
-        justify-content: space-around;
-        // flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "erste  zweite  dritte";
         
         color: $prime_bg_color;
         & aside:nth-of-type(odd)
@@ -136,10 +141,22 @@
             color: $prime_bg_color;
         }
         
-        
+        .ref_description
+        {
+            width: 33.33vw;
+            padding-right: 1rem;
+        }
         .main_ref_box
         {
-            width: 33.33%;
+            width: 33.33vw;
+            
+            
+            .ref_description
+            {
+                overflow: hidden;
+            }
+            
+           
           
             .main_box_ref
             {
