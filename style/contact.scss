@@ -155,7 +155,7 @@ content: '';
     transition: all 250ms ease;
     color: #5E5E5E;
 }
-.input_wrapper input[type="text"] 
+.input_wrapper input[type="text"], .input_wrapper input[type="email"]  
 {
     margin-top: 1em;
     display: block;
@@ -175,9 +175,9 @@ content: '';
     color: #5E5E5E;
     text-indent: 15%;
 }
-.input_wrapper input[type="text"]:focus 
+.input_wrapper input[type="text"]:focus, .input_wrapper input[type="email"]:focus 
 {
-    background: rgba(242, 56, 90, 0.05);
+    background: $font_colortwo;
     box-shadow: inset 2px 2px 5px 0 #DADADA;
     outline: none;
     text-indent: 0;
@@ -205,6 +205,10 @@ content: '';
 {
     left: 85%;
 }
+.input_wrapper input[type="email"]:focus + label 
+{
+    left: 85%;
+}
 .textarea_wrapper textarea 
 {
     margin-top: 20px;
@@ -227,7 +231,7 @@ content: '';
 }
 .textarea_wrapper textarea:focus 
 {
-    background: rgba(242, 56, 90, 0.05);
+    background: $font_colortwo;
     box-shadow: inset 2px 2px 5px 0 #DADADA;
     outline: none;
 }
